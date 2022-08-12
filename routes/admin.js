@@ -33,15 +33,15 @@ router.post('/categorias/nova', (req, res) =>{
   var erros =[]
 
   if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
-    erros.push({text:'Nome inválido'})
+    erros.push({texto:'Nome inválido'})
   }
 
   if (!req.body.slug || typeof req.body.slug == undefined || req.body.slug == null){
-    erros.push({text: "slug Inválido"})
+    erros.push({texto: "slug Inválido"})
   }
 
-  if (req.body.nome.length < 4){
-     erros.push({text: "Digite um nome com pelo menos 5 caracteres"})
+  if (req.body.nome.length < 2){
+     erros.push({texto: "Digite um nome com pelo menos 5 caracteres"})
   }
 
   if(erros.length > 0){
