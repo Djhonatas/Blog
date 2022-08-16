@@ -49,11 +49,7 @@
 //Mongoose
 
 mongoose.Promise = global.Promise
-mongoose.connect(db.mongoURI,{
- 
-  useNewUrlParser: true, 
-  useUnifiedTopology: true
-}).then(() =>{
+mongoose.connect(db.mongoURI).then(() =>{
   
   console.log("Conectado com sucesso!")
 
