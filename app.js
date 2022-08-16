@@ -5,7 +5,7 @@
   const admin = require('./routes/admin')
   const path = require('path')
   const mongoose = require('mongoose')
-  const session = require ('express-session')
+  //const session = require ('express-session')
   const session = require ('cookie-session')
   const flash = require ('connect-flash')
   require('./models/Postagem')
