@@ -11,6 +11,7 @@ module.exports = function(passport){
   passport.use(new localStrategy({usernameField: 'email', passwordField: 'senha'}, (email, senha, done)=>{
 
     Usuario.findOne({email: email}).then((usuario)=>{
+
       if(!usuario){
         return done(null, false, {message: 'Esta conta não existe'})
       }
@@ -28,12 +29,12 @@ module.exports = function(passport){
   }))
 
   passport.serializeUser((usuario, done)=>{
-    done(null, usuario.id)
+    done(null, usuario)
   })
 
-  passport.serializeUser((id, done) =>{
+  passport.deserializeUser((id, done) =>{
     Usuario.findById(id, (err, usuario)=>{
-      done(err, usuario)
+      done(err, usuario.id)
     })
   })
 }
