@@ -16,6 +16,7 @@
   require('./config/auth')(passport)
   const db = require ('./config/db')
 
+
 //Configurações
   //Sessão
     app.use(session({
@@ -139,6 +140,10 @@ app.get('/categorias/:slug', (req, res) =>{
   app.get('/404', (req, res)=>{
     res.send('Erro 404!')
   })
+
+  function openNav(){
+    alert('TEste')
+  }
 
   app.use('/admin', admin)
   app.use('/usuarios', usuarios)
