@@ -142,7 +142,7 @@ app.get('/categorias/:slug', (req, res) =>{
   })
 
   function openNav(){
-    alert('TEste')
+    alert('Teste')
   }
 
   app.use('/admin', admin)
