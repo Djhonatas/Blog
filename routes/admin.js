@@ -84,7 +84,7 @@ router.post('/categorias/edit', eAdmin, (req, res) =>{
     })
 
   }).catch((err) =>{
-    req.flash('error-msg', 'Houve um erro ao editar a categoria')
+    req.flash('error_msg', 'Houve um erro ao editar a categoria')
     res.redirect('/admin/categorias')
   }).catch((err) =>{
     req.flash('error_msg', 'Huve um erro ao tentar salvar a categoria')

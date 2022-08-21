@@ -78,7 +78,6 @@ router.post('/registro', (req, res)=>{
 
           })
         })
-
       }
 
     }).catch((err)=>{

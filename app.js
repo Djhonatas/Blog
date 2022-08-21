@@ -17,6 +17,8 @@
   const db = require ('./config/db')
 
 
+  app.use(express.static('public'))
+
 //Configurações
   //Sessão
     app.use(session({
@@ -49,8 +51,8 @@
 
 //Mongoose
 
-mongoose.Promise = global.Promise
-mongoose.connect(db.mongoURI, {useNewUrlParser: true, 
+  mongoose.Promise = global.Promise
+  mongoose.connect(db.mongoURI, {useNewUrlParser: true, 
   useUnifiedTopology: true}).then(() =>{
   
   console.log("Conectado com sucesso!")
