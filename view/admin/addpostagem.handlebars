@@ -17,14 +17,14 @@
       <label for="descricao">Descrição:</label>
      
       <input type="text" name="descricao" class="form-control" required>
-      <label for="conteudo">Conteúdo:</label>
+      <label for="conteudo" class="text-justify">Conteúdo:</label>
       
       <textarea name="conteudo" class="form-control" required></textarea>
       <label for="categoria">Categoria</label>
       
       <select name="categoria" class="form-select">
         {{#each categorias}}
-          <option value="{{_id}}">{{nome}}</option>
+          <option value="{{_id}}" class="text-justify">{{nome}}</option>
         {{else}}
           <option value="0">Nenhuma categoria registrada</option>
         {{/each}}
