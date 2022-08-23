@@ -17,6 +17,7 @@
   const db = require ('./config/db')
 
 
+
   app.use(express.static('public'))
 
 //Configurações

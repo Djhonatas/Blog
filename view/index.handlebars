@@ -1,23 +1,30 @@
-<div class="bg-light p-5 rounded-lg m-3">
-  <h1 class="display-4">Bem-vindo, Gamers</h1>
-  <p class="lead">Conteúdo sobre jogos atuais</p>
-  <hr class="mt-4">
-  <p>Aqui você vai poder ler sobre novidades dos melhores jogos da atualidade.</p>
-  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a>
+
+<div style="background: rgb(71, 6, 175); border-radius: 0 0 1rem 1rem;">
+  <div style="color:white; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    <div style="margin-left: 15px;">
+      <h1 class="display-4"><b>Bem-vindo, Gamers</b></h1>
+      <p class="lead" >Conteúdo sobre jogos atuais</p>
+        <p>Aqui você vai poder ler sobre novidades dos melhores jogos da atualidade.</p>
+      <hr class="mt-4">
+    </div>
+      <a style="background: transparent; margin-left: 15px; margin-bottom: 15px;" class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a><br>
+</div>
+
+
 </div>
 
 <hr>
 
-<h2>Postagens recentes</h2>
+<h2 style="margin-top: 25px;">Postagens recentes</h2>
 
 {{#each postagens}}
 <div class="card mt-4">
-  <div class="card-body">
+  <div style="background: rgb(121, 70, 204); border-radius: 1rem; color: white" class="card-body">
     <h3 class="text-justify">{{titulo}}</h3><br>
-    <p class="text-justify">{{descricao}}</p>
-    <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+    <p style="text-align: justify;">{{descricao}}</p>
+    <a href="/postagem/{{slug}}"><button style="background: transparent; border-radius: blue ; color: white; border-radius: 0.5rem;">Leia mais</button></a>
     <hr>
-    <small>Categoria: {{categoria.nome}}</small>
+    <small><b>Categoria:</b> {{categoria.nome}}</small>
     <small>Data de publicação: {{data}}</small>
     
   </div>

@@ -1,15 +1,17 @@
-<h4>Login:</h4>
-<div class="card">
-  <div class="card-body">
-    <form action="/usuarios/login" method="post">
+<h4 style="margin-top: 25PX;">LOGIN</h4>
+<div style="background: rgb(68, 0, 255);" class="card">
+  <div style="background: rgb(121, 70, 204); border-radius: 1rem" class="card-body">
+    <form  action="/usuarios/login" method="post">
       
-      <label for="email">Email:</label>
+      <div style="color: rgb(255, 255, 255);">
+        <label for="email">Email:</label>
         <input type="email" class="form-control" name="email" required>
 
-      <label for="senha">Senha: </label>
+        <label for="senha">Senha: </label>
         <input type="password" class="form-control" name="senha" required><br>
-
-      <button class="btn btn-success" type="submit">Entrar</button>
+      </div>
+     
+      <button style="background: rgb(68, 0, 255); color: white; border-radius: 0.5rem;" type="submit">Entrar</button>
     
     </form>
   </div>
