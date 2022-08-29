@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{box-sizing: border-box;
+  margin: 0;
+  padding: 0;}
+
+
+ li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header{
+  width: 100%;
+  background-color: #4f1699;  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 6%;  
+}
+
+
+.header__container{
+  text-align: right;
+  height: 100%;
+  position: relative;
+}
+
+.logo{
+  cursor: pointer;
+  margin-right: auto;
+  border-radius: 3rem;
+  height: 70px;
+  order: 1;
+}
+
+nav{
+  order: 3;
+}
+
+.nav__links{
+  list-style: none;
+}
+
+.nav__links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  margin-bottom: 30px;
+}
+
+button:hover{
+  background-color: rgba(0, 136, 169, 0.8);
+  
+}
+
+
+/* ========== MEDIA QUERIES (MEDIUM DEVICES) ======================*/
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+    }
+  }
+
+  /* ========== MEDIA QUERIES (SMALL DEVICES) ======================*/
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+    }
+    
+  .logo, 
+  .nav__links2,
+  .nav__links{
+    display: none;
+  }
+}

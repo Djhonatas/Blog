@@ -1,0 +1,24 @@
+<header class="container header__container">
+
+  <a class="logo" href="/"><img src="/assets/game2.png" class="logo"></a>
+  <nav>
+      <ul class="nav__links">
+      
+        <li class="nav__links2"><a href="/"><b>Home</b></a></li>
+        <li><a href="/categorias"><b>Categorias</b></a></li>
+
+        {{#if user}}
+          
+        <li><a href="/admin"><b>Adm</b></a></li>
+        <li><a href="/usuarios/logout"><b>Sair</b></a></li>
+
+        {{else}}
+
+        <li><a  href="/usuarios/login"><b>Login</b></a></li>
+        <li><a href="/usuarios/registro"><b>Registro</b></a></li>
+
+        {{/if}}
+      </ul>
+  </nav>
+   
+</header>

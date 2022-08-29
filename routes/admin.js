@@ -1,3 +1,4 @@
+const { application } = require('express')
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
@@ -6,7 +7,8 @@ const Categoria = mongoose.model('categorias')
 require ('../models/Postagem')
 const Postagem = mongoose.model('postagens')
 const {eAdmin} = require('../helpers/eAdmin')
-
+const multer = require('multer')
+const fs = require('fs')
 
 router.get('/', eAdmin, (req, res) =>{
   res.render("admin/index")
@@ -89,7 +91,6 @@ router.post('/categorias/edit', eAdmin, (req, res) =>{
   }).catch((err) =>{
     req.flash('error_msg', 'Huve um erro ao tentar salvar a categoria')
     res.redirect('/admin/categorias')
-
   })
 })
 
@@ -119,10 +120,11 @@ router.get('/postagens/add', eAdmin, (req, res)=>{
   }).catch((err)=>{
     req.flash('error_msg', 'Houve um erro ao listar postagens')
     res.redirect('/admin')
-})
+  })
 })
 
-router.post('/postagens/nova', eAdmin, (req, res)=>{
+const upload = multer({})
+router.post('/postagens/nova', eAdmin, upload.single('arquivo'), (req, res)=>{
 
   var erros =[]
   if(req.body.categoria == '0'){
@@ -138,8 +140,11 @@ router.post('/postagens/nova', eAdmin, (req, res)=>{
       descricao: req.body.descricao,
       conteudo: req.body.conteudo,
       categoria: req.body.categoria,
-      slug: req.body.slug
+      slug: req.body.slug,
+      imageName: req.file.originalname
     }
+
+      fs.writeFileSync('public/uploads/'+req.file.originalname, req.file.buffer)
 
     new Postagem(novaPostagem).save().then(()=>{
       req.flash('success_msg', 'postagem criada com sucesso')

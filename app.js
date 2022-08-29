@@ -15,7 +15,8 @@
   const passport = require('passport')
   require('./config/auth')(passport)
   const db = require ('./config/db')
-
+  const multer = require ('multer')
+  const fs = require('fs')
 
 
   app.use(express.static('public'))
@@ -79,31 +80,36 @@
     })
     
   })
+  
+  const upload = multer({})
+
+  app.post('/postagem', upload.single('arquivo'), (req, res) =>{
+    console.log(req.file)
+    fs.writeFileSync('file.png', req.file.buffer)
+    res.send('deu certo!')
+  })
 
   app.get('/postagem/:slug', (req,res) => {
-    
     const slug = req.params.slug
+      Postagem.findOne({slug}).then(postagem => {
       
-    Postagem.findOne({slug}).then(postagem => {
-        
         if(postagem){
           const post = {
             titulo: postagem.titulo,
             data: postagem.data,
-            conteudo: postagem.conteudo
+            conteudo: postagem.conteudo,
+            imageName: postagem.imageName
           }
-            res.render('postagem/index', post)
-            
-          }else{
-                req.flash("error_msg", "Essa postagem nao existe")
-                res.redirect("/")
-            }
-      })
-        .catch(err => {
+            res.render('postagem/index', post)            
+        }else{
+          req.flash("error_msg", "Essa postagem nao existe")
+          res.redirect("/")
+        }
+      }).catch(err => {
           req.flash("error_msg", "Houve um erro interno")
           res.redirect("/")
         })
-})
+  })
 
   app.get('/categorias', (req, res)=>{
     Categoria.find().lean().then((categorias)=>{
@@ -144,15 +150,12 @@ app.get('/categorias/:slug', (req, res) =>{
     res.send('Erro 404!')
   })
 
-  function openNav(){
-    alert('Teste')
-  }
-
   app.use('/admin', admin)
   app.use('/usuarios', usuarios)
 
+
 //Outros
-  const PORT =process.env.PORT || 8089
+  const PORT = process.env.PORT || 8089
   app.listen(PORT, () =>{
     console.log("Servidor rodando!")
   })

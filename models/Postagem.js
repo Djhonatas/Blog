@@ -26,6 +26,11 @@ const Postagem = new Schema({
   data:{
     type: Date,
     default: Date.now()
+  },
+
+  imageName:{
+    type: String,
+    require: true
   }
 })
 
