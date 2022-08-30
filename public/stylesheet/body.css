@@ -1,4 +1,26 @@
 
 .display .text{
-  margin-top: 3%
+  margin-top: 7%
+}
+
+.btn{
+    padding: 7px 29px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 50%;
+    margin-top: 2rem;
+}
+
+.postagem__image{
+  max-width: 450px;
+  max-height: 350px;
+  width: auto;
+  height: auto;
+  border-radius: 3rem;
+  margin-bottom: 3%;
+  margin-top: 3rem;
+  display:inline-block;
 }

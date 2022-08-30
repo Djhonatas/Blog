@@ -1,24 +1,30 @@
-<header class="container header__container">
 
-  <a class="logo" href="/"><img src="/assets/game2.png" class="logo"></a>
-  <nav>
-      <ul class="nav__links">
+
+  
+  <nav class="navbar navbar-expand-lg">
+    <a class="logo" href="/"><img src="/assets/game2.png" class="logo"></a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
       
         <li class="nav__links2"><a href="/"><b>Home</b></a></li>
-        <li><a href="/categorias"><b>Categorias</b></a></li>
+        <li><a class="dropdown-item" href="/categorias"><b>Categorias</b></a></li>
 
         {{#if user}}
           
-        <li><a href="/admin"><b>Adm</b></a></li>
-        <li><a href="/usuarios/logout"><b>Sair</b></a></li>
+        <li><a class="dropdown-item" href="/admin"><b>Adm</b></a></li>
+        <li><a class="dropdown-item" href="/usuarios/logout"><b>Sair</b></a></li>
 
         {{else}}
 
-        <li><a  href="/usuarios/login"><b>Login</b></a></li>
-        <li><a href="/usuarios/registro"><b>Registro</b></a></li>
+        <li><a class="dropdown-item" href="/usuarios/login"><b>Login</b></a></li>
+        <li><a class="dropdown-item" href="/usuarios/registro"><b>Registro</b></a></li>
 
         {{/if}}
       </ul>
+       </div>
+
   </nav>
    
-</header>

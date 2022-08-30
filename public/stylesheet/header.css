@@ -13,13 +13,21 @@
   text-decoration: none;
 }
 
-header{
+.logo{
+  cursor: pointer;
+  margin-left: auto;
+  border-radius: 3rem;
+  height: 70px;
+  order: 1;
+}
+
+.navbar{
   width: 100%;
-  background-color: #4f1699;  
+  background-image: url(/assets/game2.png);  
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 6%;  
+  padding: 37px 6%;  
 }
 
 
@@ -29,32 +37,31 @@ header{
   position: relative;
 }
 
-.logo{
-  cursor: pointer;
-  margin-right: auto;
-  border-radius: 3rem;
-  height: 70px;
-  order: 1;
-}
-
 nav{
   order: 3;
 }
 
-.nav__links{
+.navbar-toggler{
+  background-color:rgba(255, 246, 246, 0.575);
+  margin-bottom: auto;
+  margin-top: auto;
+  
+}
+
+.navbar-nav{
   list-style: none;
 }
 
-.nav__links li{
+.navbar-nav li{
   display: inline-block;
   padding: 0px 20px;
 }
 
-.nav__links li a{
+.navbar-nav li a{
   transition: all 0.3s ease 0s;
 }
 
-.nav__links li a:hover{
+.navbar-nav li a:hover{
   color: #0088a9;
 }
 
@@ -74,23 +81,18 @@ button:hover{
   
 }
 
-
-/* ========== MEDIA QUERIES (MEDIUM DEVICES) ======================*/
-@media screen and (max-width: 1024px) {
-  header {
-    height: 100vh;
-    }
-  }
-
-  /* ========== MEDIA QUERIES (SMALL DEVICES) ======================*/
+/* ========== MEDIA QUERIES (SMALÇL DEVICES) ===================*/
 @media screen and (max-width: 600px) {
-  header {
-    height: 100vh;
-    }
-    
-  .logo, 
-  .nav__links2,
-  .nav__links{
-    display: none;
+  .container {
+    width: var(--container-width-sm);
+  }
+  .logo{
+    cursor: pointer;
+    margin-left: auto;
+    border-radius: 3rem;
+    height: 70px;
+    order: 1;
+    margin-bottom: auto;
+    margin-top: auto;
   }
 }
