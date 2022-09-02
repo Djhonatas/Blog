@@ -1,0 +1,51 @@
+.categoria__container{
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-white); 
+}
+
+.nome{
+  color: rgb(255, 255, 255);
+  background-color:transparent;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', Times, serif
+
+}
+  
+.categoria input{
+  margin-bottom: 1rem;
+}
+
+.btn2{
+  margin-left: -3rem;
+  margin-top: -1rem;
+}
+
+.hr{
+  margin-top: -2rem;
+}
+
+.categoria__titulo{
+  margin-top: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btn__container{
+  display: inline-block;
+}
+
+.a__btn{
+  float: left;
+  margin-top: 30px;
+}
+
+.form__btn{
+  margin-top: 25px;
+  float: left;
+}

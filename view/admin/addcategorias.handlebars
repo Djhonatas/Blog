@@ -3,12 +3,13 @@
 {{else}}
 
 {{/each}}
-<h3>Nova Categoria:</h3>
-<div class="card">
+<h3 class="categoria__titulo">Nova Categoria:</h3>
+<div class="contianer categoria__container">
    <div class="card-body">
     <form action="/admin/categorias/nova" method="POST">
       <label for="nome">Nome: </label>
-      <input type="text" id="nome" name="nome" placeholder="Nome da categoria" class="form-control">
+      <input type="text" id="nome" name="nome" placeholder="Nome da categoria" class="form-control"><br>
+      
       <label for="slug"> Slug: </label>
       <input type="text" id="slug" name="slug" placeholder="nome do slug" class="form-control">
       <br>

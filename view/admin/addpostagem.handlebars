@@ -3,26 +3,23 @@
 {{else}}
 
 {{/each}}
-<div class="card">
-  <div class="card-body">
-    <h4>Nova postagem</h4>
+<div class="container postagem__container">
+    <h4 class="postagem">Nova postagem</h4>
    
     <form action="/admin/postagens/nova"  method="POST" enctype="multipart/form-data">
-      <label for="titulo">Título</label>
+        <label for="titulo">Título</label>
         <input type="text" name="titulo" class="form-control" required>
+        
         <label for="slug">Slug:</label>
-        
         <input type="text" name="slug" class="form-control" required>
-        <label class="text-justify" for="descricao">Descrição:</label>
-      
-        <input type="text" name="descricao" class="form-control" required>
-        <label for="conteudo" class="text-justify">Conteúdo:</label>
         
-        <textarea name="conteudo" class="form-control" required></textarea>
+        <label class="text-justify" for="descricao">Descrição:</label>     
+        <input type="text" name="descricao" class="form-control" required>
+        
+        <label for="conteudo" class="text-justify">Conteúdo:</label>  
+        <textarea name="conteudo" class="form-control" required></textarea><br>
+        
         <label for="categoria">Categoria</label>
-
-        <input type="file" name="arquivo"  accept="image/png, image/jpeg, image/jpg">
-
         <select name="categoria" class="form-select">
           {{#each categorias}}
             <option value="{{_id}}" class="text-justify">{{nome}}</option>
@@ -30,8 +27,8 @@
           {{else}}
             <option value="0">Nenhuma categoria registrada</option>
           {{/each}}
-        </select>
-        <button type="submit">Criar postagem</button>
+        </select><br>
+        <input class="postagem__imagem" type="file" name="arquivo"  accept="image/png, image/jpeg, image/jpg" required>
+        <br><button type="submit">Criar postagem</button>
     </form>
-  </div>
 </div>

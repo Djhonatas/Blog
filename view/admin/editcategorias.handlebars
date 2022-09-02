@@ -3,16 +3,18 @@
 {{else}}
 
 {{/each}}
-<h3>Editar Categoria:</h3>
-<div class="card">
+<h3 class="categoria__titulo">Editar Categoria:</h3>
+<div class="container categoria__container">
    <div class="card-body">
     <form action="/admin/categorias/edit" method="POST">
-    <input type="hidden" name="id" value="{{categoria._id}}">
+      <input type="hidden" name="id" value="{{categoria._id}}">
+
       <label for="nome">Nome: </label>
-       <input type="text" id="nome" name="nome" placeholder="Nome da categoria" class="form-control" value="{{categoria.nome}}">
+       <input type="text" id="nome" name="nome" placeholder="Nome da categoria" class="form-control" value="{{categoria.nome}}"><br>
+
       <label for="slug"> Slug: </label>
        <input type="text" id="slug" name="slug" placeholder="Slug da categoria" class="form-control" value="{{categoria.slug}}">
-      <br>
+
       <button type="submit" type="button" class="btn btn-primary">Editar categoria</button>
     </form>
   </div>

@@ -175,6 +175,7 @@ router.post('/postagens/edit', eAdmin, (req, res)=>{
     postagem.descricao = req.body.descricao
     postagem.conteudo = req.body.conteudo
     postagem.categoria = req.body.categoria
+    postagem.imageName= req.file.originalname
 
     postagem.save().then(()=>{
       req.flash('success_msg', 'Postagem editada com sucesso!')

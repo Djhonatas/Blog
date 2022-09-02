@@ -1,15 +1,14 @@
 <h1>{{categoria.nome}}</h1>
 
-
 {{#each postagens}}
 
-<div class="card mt-4">
-  <div class="card-body">
-    <h3>{{titulo}}</h3><br>
-    <p class="text-justify">{{descricao}}</p>
-    <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
-    <hr>
+<div class="container postagem__container">
+  <div >
+    <h3 style="margin-top: 2rem;">{{titulo}}</h3><br>
+    <p>{{descricao}}</p>
+    <a href="/postagem/{{slug}}"><button>Leia mais</button></a><br>
     <small>Data de publicação: {{data}}</small>
+    <hr>
   </div>
 </div>
 

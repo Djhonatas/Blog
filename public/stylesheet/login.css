@@ -1,0 +1,19 @@
+.login__container{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-white); 
+}
+
+.login{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-family: 'Times New Roman', Times, serif
+}
+
+.login__container input{
+  margin-bottom: 1rem;
+}
