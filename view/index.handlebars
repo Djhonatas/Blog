@@ -3,20 +3,19 @@
   <div class="container">
   <h1 class="display">
     <div class="text">
-      <b >Bem-vindo, Gamers (Blog em Desenvolvimento)</b></h1>
+      <b >Bem-vindo, Gamers</b></h1>
       <p  >Conteúdo sobre jogos atuais</p>
       <p>Aqui você vai poder ler sobre novidades dos melhores jogos da atualidade.</p>
-      <hr >
-    </div>
 
+    </div>
   <hr>
-  <h2>Postagens recentes</h2> 
+  <h2 style="font-size: 70px; font-family: 'Times New Roman', Times, serif;" ><b>Postagens recentes</b></h2> 
 
   {{#each postagens}}
   
   <div class="container text__container">
     <h3 class="text">{{titulo}}</h3><br>
-    <p style="text: justify;">{{descricao}}</p>
+    <p style="text-align: justify;">{{descricao}}</p>
     <small><b>Categoria:</b> {{categoria.nome}}</small>
     <small>Data de publicação: {{data}}</small>
     <a href="/postagem/{{slug}}"><button class="btn" >Leia mais</button></a> 

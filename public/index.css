@@ -75,8 +75,6 @@ section > h2 {
   margin-bottom:  3rem;
 }
 
-
-
 a {
   color: var(--color-primary);
   transition: var(--transition)
